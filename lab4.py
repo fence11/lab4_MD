@@ -110,7 +110,7 @@ def create_weighted_adjacency_matrix(num_nodes, nodes_input):
     return graph
 
 
-def BellmanKalaba(num_nodes, nodes_input):
+def bellman_kalaba(num_nodes, nodes_input):
     matrix = [['+' for _ in range(num_nodes)] for _ in range(num_nodes)]
     for i, connections_with_weights in enumerate(nodes_input):
         for conn, weight in connections_with_weights:
@@ -199,7 +199,7 @@ def menu(num_nodes, nodes_input):
                 graph = create_adjacency_matrix(num_nodes, nodes_input)
                 visualize_graph(graph)
             case 5:
-                result_matrix = BellmanKalaba(num_nodes, nodes_input)
+                result_matrix = bellman_kalaba(num_nodes, nodes_input)
                 print("\nBellman-Kalaba matrix:")
                 print_bellman_kalaba(result_matrix)
             case 0:
